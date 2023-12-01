@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <div class="back">
+            <a href="javascript:window.history.back();" class="back-link">
+             <i class="back-arrow left"></i><p>К методологии<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>Карточка статьи</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="article">
+                <ol>
+
+                    <li><span class="highlight">Оценка сроков и сложности реализации</span> предлагаемого решения с обоснованием. 
+                    Выполняется в начале работы над статьей</li>
+
+                    <li><span class="highlight">Постановка задачи.</span> Входные и выходные данные. Область применения 
+                    предлагаемого решения.</li>
+
+                    <li><span class="highlight">Ключевая идея</span> предлагаемого решения.</li>
+
+                    <li><span class="highlight">Уровень техники.</span> </li>
+
+                    <ol>
+                        <li>
+                            Таксономия. Методологическое пространство решений задачи. Основные направления.
+                        </li>
+                        <li>
+                            Эволюция. Были ли определенные периоды в истории развития решений задачи, если да, то какие? Чем 
+                            обусловлен переход между периодами (изобретение конкретного алгоритма...)?
+                        </li>
+                        <li>
+                            Hедостатки существующих решений (желательно, проявляющие себя количественно: низкая точность оценок 
+                            в конкретных сценариях, долгий инференс, необходимость сбора большого объема обучающих данных или их 
+                            трудоемкой разметки...). Нужно обосновать необходимость улучшения существующих решений или разработки 
+                            нового решения.
+                        </li>
+                    </ol>
+
+                    <li> <span class="highlight">Позиционирование.</span> Предлагаемое решение в методологическом пространстве 
+                    существующих решений задачи.</li>
+
+                    <ol>
+                        <li>
+                            Таксономия. К какому направлению принадлежит предлагаемое решение?
+                        </li>
+                        <li>
+                            Эволюция. Чему наследует предлагаемое решение? Чем отличается от предшествующих решений?
+                        </li>
+                        <li>
+                            Кросс-связи. Заимствует ли предлагаемое решение алгоритмы, подходы, модули из решений других задач?
+                        </li>
+                        <li>
+                            Преимущества предлагаемого решения. Какие недостатки существующих решений удалось устранить или 
+                            минимизировать в предлагаемом решении? С помощью каких модификаций?
+                        </li>
+                        <li>
+                            Недостатки предлагаемого решения. Что неизбежно определено устройством предлагаемого решения, 
+                            принадлежностью к определенному направлению? Что унаследовано от предшествующего решения? Какие 
+                            недостатки привнесены особенностями предлагаемого решения, и не свойственны другим решениям этого 
+                            направления или предшествующему решению? Как эти недостатки ограничивают применимость предлагаемого 
+                            решения, каковы возможные сценарии использования? Что можно сделать, чтобы устранить или минимизировать 
+                            недостатки предлагаемого решения?
+                        </li>
+                    </ol>
+
+                    <li> <span class="highlight">Экспериментальная проверка</span> предлагаемого решения. </li>
+
+                     <ol>
+                        <li>
+                            Стандартные протоколы оценки качества решения задачи (бенчмарки). Используемые данные, в чем их 
+                            особенность, какие выводы на основе результатов экспериментов правомерны, а какие – нет? 
+                            (мало данных=>нерепрезентативные результаты, нельзя оценить устойчивость...; данные определенного 
+                            типа=>невозможность оценки обобщающей способности метода...)
+                        </li>
+                        <li>
+                            Метрики. Что именно показывают существующие метрики. Преимущества и недостатки существующих метрик. 
+                            Выбор ключевых метрик с обоснованием причин.
+                        </li>
+                        <li>
+                            Список экспериментов + ablation studies. Эксперименты должны наглядно демонстрировать заявленные 
+                            преимущества предлагаемого решения из п. 3.4. Можно ли считать полученные эмпирические свидетельства 
+                            исчерпывающими, если нет, как оправдать их недостаточность?
+                        </li>
+                    </ol>
+                </div>
+                <div class="download">
+                    <a href="paper-card.docx" class="download-btn">Скачать</a>
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/scripts.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <div class="back">
+            <a href="javascript:window.history.back();" class="back-link">
+                <i class="back-arrow left"></i><p>К экспериментам<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>Пояснить за базар</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="article">
+            Однажды рецензенты статьи нас вежливо попросили удержаться от необоснованных 
+            громких заявлений. Старый добрый trade-off между публицистикой и наукой, 
+            кликбейтностью и корректностью, излишне смелым обобщением и разбором очень узкого 
+            кейса, представляющего мало интереса для широкой публики. 
+            <br><br>
+            Опишу конкретный случай, но, думаю, ситуация вполне стандартная.
+            <br><br>
+            В этот раз мы попались на критике в адрес предшествующих методов: они-да плохи 
+            тем, что зависят от большого количества гиперпараметров, которые нужно подбирать 
+            под конкретный домен. А у нас – полностью обучаемый пайплайн с небольшим числом 
+            гиперпараметров, соответственно, при обучении предлагаемый метод меньше адаптируется 
+            под специфику конкретного домена данных, и в результате обладает более высокой обобщающей 
+            способностью. На пальцах и из здравого смысла – так-то оно так, конечно. Но по-хорошему, 
+            все подобные заявления надо подкреплять в числах и картинках: указывать значения параметров, 
+            фигурирующих в заявлении, приводить количественные результаты экспериментов, показывать 
+            примеры работы. В нашем случае следовало указать количество гиперпараметров и провести 
+            эксперименты по zero-shot transfer.
+            <br><br>
+            Так что надо быть аккуратней с заявлениями.  <span class="highlight">Если очень надо 
+            для дела или неудержимо хочется что-то громко заявить – думайте, как это показать или 
+            доказать.</span>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="../../images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+
+</html>

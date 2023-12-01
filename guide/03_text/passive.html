@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <div class="back">
+            <a href="javascript:window.history.back();" class="back-link">
+                <i class="back-arrow left"></i><p>К тексту<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>Залог успеха</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="article">
+            Для русскоязычной традиции академического письма характерно использование пассивного залога 
+            (исследование <it>проведено</it>).
+            <br><br>
+            В научных текстах на английском языке используются оба залога. Возможно, из-за того, что 
+            значительная доля текстов пишется не-носителями английского языка, активный залог (мы 
+            <it>провели</it> исследование) даже преобладает над пассивным: так проще и короче.
+            <br><br>
+            <span class="highlight">Чтобы ваш текст не был утомительно однообразным, чередуйте активный 
+            и пассивный залоги.</span>
+            <br><br>
+            Предложения в активном залоге можно условно поделить на we-предложения, где субъектом действия 
+            является автор исследования (мы <it>обучили</it> модель, мы <it>применили</it> стратегию, мы 
+            <it>установили</it> значение параметра равным ...), и it-предложения, где субъектом действия 
+            является некоторый другой агент (авторы предыдущих исследований, которые что-то <it>редлагают</it>, 
+            модель, которая <it>состоит</it> из модулей, слой, который <it>выполняет</it> вычисления, 
+            значение метрик, которые <it>меняются</it> в зависимости от параметров модели).
+            <br><br>
+            It-предложения – это хорошо. Вы молодцы, если придумаете много таких.
+            <br><br>
+            С we-предложениями нужно быть аккуратнее. Три подряд предложения, начинающиеся с We (train a model, 
+            apply a strategy, set a value to ...) – плохо: это создает ощущение излишней простоты и неформальности. 
+            Глаз цепляется за одинаковые слова в начале предложения. Это легко решается: перед We можно 
+            поставить вводные слова.
+            <br><br>
+            Три подряд предложения в пассивном залоге (a model is trained, a strategy is applied, a value is 
+            set to ...) – плохо: это делает текст тяжеловесным и душным. Попробуйте переформулировать так, 
+            чтобы объект или второстепенный член предложения был субъектом в активном залоге:
+            <br><br>
+            <div class="citation">
+                a model is used a backbone <i class="arrow right"></i>  a model serves as a backbone
+                <br><br>
+                smth is processed with a network <i class="arrow right"></i>  a network processes smth
+                <br><br>
+                smth is included in the pipeline <i class="arrow right"></i> the pipeline includes smth
+                <br><br>
+                smth is shown in Figure / is reported in Table <i class="arrow right"></i> Figure shows smth / Table contains smth
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="../../images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+
+</html>

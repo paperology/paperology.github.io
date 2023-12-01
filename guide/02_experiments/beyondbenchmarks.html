@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+     <div class="title">
+        <div class="back">
+            <a href="javascript:window.history.back();" class="back-link">
+                <i class="back-arrow left"></i><p>К экспериментам<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>За рамками бенчмарков</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="article">
+                Содержательная и неожиданная критика из рецензий.
+                <br><br>
+                Один из рецензентов пишет, что бенчмарки – это прекрасно, но что насчет практической 
+                применимости, эмпирических и теоретических ограничений метода и возможностей для улучшений? 
+                Как дела с генерализацией и переносом между доменами? Другой рецензент критикует отсутствие 
+                failure cases и анализа накопления ошибок при последовательном применении компонентов 
+                пайплайна. Да, эти претензии можно было б дезавуировать, сразу оговорившись, что превосходство 
+                предлагаемого подхода рассматривается только! в контексте стандартных бенчмарков, и 
+                измеряется только! в стандартных метриках качества, и не проявляется нигде и никак больше. 
+                К сожалению, формальный подход к тестированию и научная строгость в изложении результатов 
+                сделают ценность вашей работы довольно сомнительной.
+                <br><br>
+                Как же разрешить эту неловкую и, пожалуй, парадоксальную ситуацию, в который мы все 
+                оказываемся, когда пытаемся втиснуть свои наработки в стандарты научной работы?
+                <br><br>
+                Для начала, нужно помнить, что вашу работу будут оценивать не формалисты и ригористы, 
+                а такие же оппортунисты-исследователи, которые понимают ограничения существующих процедур 
+                тестирования. Но оценки они будут ставить не за свое понимание, а за ваше. Ваша задача – 
+                это понимание продемонстрировать. Некритический незамутненный восторг от выбивания state-of-the-art 
+                результатов надо испытать в рабочее время, а потом выдохнуть, снова стать ученым, и 
+                описать свои достижения в аналитическом нейтральном ключе.
+                <br><br>
+                Поэтому стоит оставить место под рассуждения в свободном стиле о:
+                <ul>
+                    <li> <span class="highlight">теоретических ограничениях</span> метода, обусловленных его устройством; </li>
+                    <li> возможностях <span class="highlight">практического применения</span> метода, 
+                    наиболее выигрышных сценариях использования метода и его ограничениях; </li>
+                    <li> потенциальных <span class="highlight">усовершенствованиях</span>. </li>
+                </ul>
+                <br>
+                По возможности также стоит продемонстрировать работу вашего метода in the wild, на реальных данных. 
+                Хорошо, если получится собрать данные, на которых по сравнению с бенчмарками преимущества вашего 
+                метода особенно заметны или особенно важны. В любом случае стоит попытаться проанализировать 
+                полученные качественные результаты, выявить случаи успешного срабатывания и failure cases, 
+                которых нет в бенчмарках и предложить объяснения наблюдаемым эффектам.
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="../../images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+
+</html>

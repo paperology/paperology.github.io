@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <div class="back">
+            <a href="#" class="back-link">
+                <i class="back-arrow left"></i><p>К тексту<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>Принцип согласия</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <div class="article">
+            Достаем двойные листочки, пишем сочинение по русскому языку... 
+            <br><br>
+            Да, не двойные листочки, а LaTeX, и не сочинение, а статью, и не по-русски, а по-английски. 
+            Но школьные познания из филологии (которой вас учили под видом русского языка или родной речи) 
+            вам и здесь пригодятся – вычитать текст статьи и исправить ошибки.
+            <br><br>
+            Одна из самых частых ошибок – несогласованность подлежащего и сказуемого. 
+            <br><br>
+            Вспоминаем школьные годы чудесные:
+            <br><br>
+            <span class="highlight">Подлежащее</span> обозначает, о ком или о чём говорится в предложении, и 
+            отвечает на вопросы: кто? или что?
+            <br><br>
+            <span class="highlight">Сказуемое</span> связано с подлежащим и отвечает на вопросы: что делает 
+            предмет? каков предмет? что такое предмет? кто такой?
+            <br><br>
+            Подлежащее и сказуемое составляют основу предложения, остальное второстепенно: контекст, уточнения, 
+            детали. Когда вы пишете предложение не от основы, а как мысль идёт, то между подлежащим и сказуемым 
+            встаёт ещё много разных слов. За ними легко проглядеть то, что подлежащее и сказуемое ее сочетаются.
+            Например:
+            <br>
+            <div class="citation">
+                the model used as a baseline in our work supposes unsupervised training
+                <br><br>
+                network trains for N epochs on a dataset
+                <br><br>
+                the values obtained after applying the described module rank the proposals by likelihood
+                <br><br>
+                the dataset hereinafter referred to as N actually combines M existing datasets
+            </div>
+            <br>
+            Теперь убираете все лишнее и пробуете прочитать основу. Советую распечатать 
+            статью и ручкой подчеркивать: одной линией – подлежащее, двумя – сказуемое. Так сразу будет видно, 
+            не запутаетесь. Давайте, как в школе:
+            <br>
+            <div class="citation">
+                the <span class="grammar-subject">model</span> used as a baseline in our work <span class="grammar-action">supposes</span> unsupervised training <i class="arrow right"></i> 
+                <span class="grammar-subject">model</span> <span class="grammar-action">supposes</span> 
+                <br><br>
+                our <span class="grammar-subject">network</span> <span class="grammar-action">trains</span> for N epochs on a dataset <i class="arrow right"></i> 
+                <span class="grammar-subject">network</span> <span class="grammar-action">trains</span> 
+                <br><br>
+                the <span class="grammar-subject">values</span> obtained after applying the described module <span class="grammar-action">rank</span> the proposals by likelihood <i class="arrow right"></i> 
+                <span class="grammar-subject">values</span> <span class="grammar-action">rank</span>
+                <br><br>
+                the <span class="grammar-subject">dataset</span> hereinafter referred to as N actually <span class="grammar-action">combines</span> M existing datasets <i class="arrow right"></i> 
+                <span class="grammar-subject">dataset</span> <span class="grammar-action">combines</span>
+            </div>
+            <br>
+            Сомневаетесь – переводите на русский, на русском проще заметить огрехи. Но только самостоятельно! 
+            Гугл-переводчик вас и так поймет и спрячет проблему за хорошей формулировкой.
+            <br>
+            <div class="citation">
+                the <span class="grammar-subject">model</span> <span class="grammar-action">supposes</span> <i class="arrow right"></i> 
+                <span class="grammar-subject">модель</span> <span class="grammar-action">предполагает</span>. 
+                <br>
+                Нет! Предполагаете вы, а не модель. We suppose that the model / the model is supposed to be trained
+                <br><br>
+                our <span class="grammar-subject">network</span> <span class="grammar-action">trains</span> <i class="arrow right"></i> 
+                <span class="grammar-subject">нейросеть</span> <span class="grammar-action">обучает</span>. 
+                <br>
+                Опять мимо. Это вы обучаете модель – а она, соответственно, обучается. We train the network / the network is trained 
+                <br><br>
+                the <span class="grammar-subject">values</span> <span class="grammar-action">rank</span> <i class="arrow right"></i> 
+                <span class="grammar-subject">значения</span> <span class="grammar-action">ранжируют</span>. 
+                <br>
+                Увы. Но что-то может быть отранжировано в соответствии со значениями: we use the values to rank / the values are used to rank
+                <br><br>
+                the <span class="grammar-subject">dataset</span> <span class="grammar-action">combines</span> <i class="arrow right"></i> 
+                <span class="grammar-subject">датасет</span> <span class="grammar-action">комбинирует</span>. 
+                <br>
+                Снова неправильно. Датасет включает, сочетает в себе, составлен из: the dataset is a combination of, the dataset consists of
+            </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="../../images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+
+</html>

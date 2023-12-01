@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title">
+        <div class="back">
+            <a href="javascript:window.history.back();" class="back-link">
+                <i class="back-arrow left"></i><p>К структуре<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>Секции</h1>
+        </div>
+    </div>
+
+    <div class="section content">
+        <div class="container">
+            <div class="article">
+                Большая часть статей по машинному обучению состоит из следующих секций (в порядке следования):
+                <ul>
+                    <li> Абстракт / Abstract </li>
+                    <li> Введение / Introduction </li>
+                    <li> Обзор литературы / Related Work </li>
+                    <li> Описание предлагаемого подхода / Proposed Approach (Method) </li>
+                    <li> Эксперименты и результаты / Experiments and Results </li>
+                    <li> Заключение / Conclusion </li>
+                </ul>
+                Возможна некоторая вариативность: иногда Experiments и Results оформляют в отдельные секции.
+                <br><br>
+                Если одним из вкладов статьи заявлен датасет, то посвященная ему секции идет ли вместо секции 
+                Proposed Method (если датасет является основным вкладом статьи) или после этой секции (если это один 
+                из вкладов, и заявляется еще и некоторый алгоритм, метод).
+                <br><br>
+                Также существует практика располагать Related Work перед Conclusion, чтобы при чтении статьи с начала 
+                "побыстрее переходить к делу". Мне она не нравится – я считаю, что в этом случае логика повествования 
+                оказывается нарушена. Нелинейный текст вынуждает подглядывать в конец и возвращаться к началу: телепорты
+                 между страницами – занятие утомительное. Я люблю, когда в статьях есть понятный сквозной сюжет, и 
+                 повествование линейно (ну, может, за вычетом регулярных обращений к ключевой идее статьи – это можно и 
+                 несколько раз повторить, не слипнется). Такой текст берет читателя за руку и ведет от первой до последней 
+                 страницы, читать его легко и приятно. Я всеми руками голосую за линейный текст; однако это не закон, 
+                 а дело вкуса.
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="../../images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+
+</html>

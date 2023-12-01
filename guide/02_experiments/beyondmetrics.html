@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paperology </title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/styles.css" rel="stylesheet">
+    <link href="../../scss/styles.scss" rel="stylesheet">
+</head>
+
+<body>
+     <div class="title">
+        <div class="back">
+            <a href="javascript:window.history.back();" class="back-link">
+                <i class="back-arrow left"></i><p>К экспериментам<p>
+            </a>
+        </div>
+        <div class="title-content">
+            <h1>Метрики</h1>
+        </div>
+    </div>
+
+    <div class="section content">
+        <div class="container">
+            <div class="article">
+                Как-то раз в статье мы заявили state-of-the-art результаты и получили несколько 
+                осажающий отзыв от рецензентов. Рецензенты осторожно напомнили, что качество модели, 
+                измеренное в стандартных метриках, лишь отчасти описывает peformance модели. Если у 
+                вас есть хоть намек на то, что методы предыдущего поколения медленные и/или 
+                ресурсоемкие, или вы заявляете о тотальном превосходстве вашего метода над всеми 
+                существующими – извольте предоставить и тактико-технические характеристики модели: 
+                <span class="highlight">скорость инференса</span>, <span class="highlight">время обучения</span>, 
+                <span class="highlight">размер модели</span>, <span class="highlight">вычислительную сложность</span>, 
+                а также количество затрачиваемых ресурсов (<span class="highlight">памяти</span>) 
+                на разных этапах обучения и применения модели.
+                <br><br>
+                <span class="highlight">Скорость инференса модели</span> хорошо бы измерить в тех же 
+                условиях, в которых ее замеряли ваши предшественники. Скорее всего, у вас другой 
+                процессор и другая видеокарта. Если вы не можете напрямую сравнить значения для вашей 
+                модели и для существующих, то, в идеале, стоит запустить конкурирующие методы и замерить 
+                их скорость в вашей тестовой установке в одинаковых условиях. Если все это неприменимо 
+                в вашем случае (нет кода, воспроизвести метод по описанию статьи невозможно, указанная 
+                в оригинальной статье скорость была измерена на другой машине с другой видеокартой...) 
+                – будьте очень аккуратны в формулировках, избегайте прямых сравнений в самой статье и 
+                подготовьте объяснение для рецензентов. В крайнем случае апеллируйте к другим показателям: 
+                вычислительной сложности и размеру модели (если сравнение в вашу пользу, конечно).
+                <br><br>
+                <span class="highlight">Вычислительная сложность</span> измеряется в флопсах, FLOPS.
+                <br><br>
+                <span class="highlight">Размер модели</span> – количество параметров, и, соответственно, ее вес.
+                <br><br>
+                <span class="highlight">Ресурсы</span> – это, в первую очередь, объем памяти, занимаемый 
+                моделью на инференсе (memory footprint). Во вторую – объем памяти, занимаемый при обучении. 
+                Его приводить необязательно, но это позволяет оценить, насколько затратно может быть создание 
+                программного решения с использованием вашей модели. Поэтому, если вы предлагаете уже обученную 
+                general-purpose модель, и потенциальный пользователь может использовать ее из коробки, т.е. 
+                нового обучения не требуется – акцентируйте на этом внимание еще раз, именно в этом разделе 
+                статьи, в контексте ресурсов.
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; <span id="current-year">2023</span> Anna Vorontsova
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HiVoQCIAAAAJ&hl=ru" target="_blank"><img src="../../images/google-scholar.png" class="fas" aria-hidden="true"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/scripts.min.js"></script>
+</body>
+
+</html>

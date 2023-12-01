@@ -1,0 +1,677 @@
+/*!
+    Title: Dev Portfolio Template
+    Version: 1.2.2
+    Last Change: 03/25/2020
+    Author: Ryan Fitzgerald
+    Repo: https://github.com/RyanFitzgerald/devportfolio-template
+    Issues: https://github.com/RyanFitzgerald/devportfolio-template/issues
+
+    Description: This file contains all the styles associated with the page
+    that don't come from third party libraries. This file gets compiled using
+    Gulp and send to the /css folder which is then loaded on the page.
+*/
+/*
+    File Contents:
+
+        1. Variables
+        2. Mixins
+        3. Global Styles
+        4. Lead Styles
+        8. Project Styles
+        11. Optional Section Styles
+        12. Media Queries
+*/
+/*
+    ------------------------
+    ----- 1. Variables -----
+    ------------------------
+*/
+/*
+    ---------------------
+    ----- 2. Mixins -----
+    ---------------------
+*/
+/*
+    ----------------------------
+    ----- 3. Global Styles -----
+    ----------------------------
+*/
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit; }
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  background: linear-gradient(180deg, #aaa 0%, #fff 60%, #fff 100%);
+  background-repeat: no-repeat;
+  height: 100%;
+  min-height: 100%; }
+  body.active {
+    overflow: hidden;
+    z-index: -1; }
+
+#main-body {
+  background: linear-gradient(180deg, #aaa 0%, #fff 100%);
+  background-repeat: no-repeat; }
+
+h1, h2, h3, p, a, text {
+  color: #000;
+  font-weight: 50;
+  margin: 0;
+  text-align: justify; }
+
+h1, h2, h3 {
+  font-family: Courier New, monospace; }
+
+h1 {
+  font-size: 10em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 0.9em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.25em; }
+
+p {
+  font-size: 1em; }
+
+@keyframes dropHeader {
+  0% {
+    transform: translateY(-100%); }
+  100% {
+    transform: translateY(0); } }
+.content {
+  position: relative;
+  padding: 50px 15px;
+  text-align: justify;
+  height: auto;
+  min-height: 100%;
+  margin-bottom: -50px; }
+
+.footer {
+  background: #000;
+  pagging: 50px 0px;
+  margin-top: auto;
+  margin-bottom: 0;
+  height: 60px; }
+
+.copyright {
+  position: relative;
+  padding-top: 20px; }
+  .copyright p {
+    margin: 0;
+    color: #fff; }
+
+.top {
+  text-align: center;
+  color: #f00; }
+  .top span {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center; }
+  .top i {
+    color: #fff; }
+
+.download {
+  position: relative;
+  padding: 0px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.download-btn {
+  display: inline-block;
+  color: #000;
+  background: rgba(255, 0, 0, 0.5);
+  padding: 15px 25px;
+  text-align: center;
+  width: 150px;
+  max-width: 150px;
+  border-radius: 0px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease all; }
+  .download-btn:hover {
+    box-shadow: 5px 5px 10px 1px rgba(255, 0, 0, 0.5);
+    color: #000;
+    background: #fff;
+    text-decoration: none; }
+  .download-btn:focus {
+    box-shadow: 5px 5px 10px 1px rgba(255, 0, 0, 0.5);
+    color: #000;
+    background: #fff;
+    text-decoration: none; }
+  .download-btn:visited {
+    box-shadow: 5px 5px 10px 1px rgba(255, 0, 0, 0.5);
+    color: #000;
+    background: #fff;
+    text-decoration: none; }
+
+.heading {
+  position: relative;
+  display: inline-block;
+  font-size: 10em;
+  font-weight: 100;
+  margin: 0 0 30px 0; }
+
+.social {
+  text-align: right;
+  color: #fff; }
+  .social ul {
+    margin: 5px 0 0 0;
+    padding: 0; }
+  .social li {
+    display: inline-block;
+    font-size: 1em;
+    list-style: none; }
+  .social a {
+    display: block;
+    color: #fff;
+    padding: 10px; }
+    .social a:hover {
+      color: #f00; }
+  .social img {
+    max-height: 30px;
+    width: auto; }
+
+.accent {
+  color: #f00; }
+
+.highlight {
+  background-color: rgba(255, 0, 0, 0.5); }
+
+.arrow {
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 2px; }
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg); }
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg); }
+
+.link:hover {
+  color: #000;
+  text-decoration: none; }
+.link:focus {
+  color: #aaa; }
+.link:visited {
+  color: #aaa; }
+
+/*
+    --------------------------
+    ----- 4. Main Styles -----
+    --------------------------
+*/
+#main-lead {
+  position: sticky;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  padding: 50px 50px;
+  background-size: cover;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s; }
+
+#main-lead-content {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-transition: padding 0.3s;
+  -moz-transition: padding 0.3s;
+  -ms-transition: padding 0.3s;
+  -o-transition: padding 0.3s;
+  transition: padding 0.3s; }
+  #main-lead-content h1, #main-lead-content h2 {
+    margin: 0; }
+  #main-lead-content h1 {
+    color: #fff;
+    font-size: 12em;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    line-height: 0.9em; }
+  #main-lead-content h2 {
+    color: #fff;
+    font-size: 2.25em;
+    margin-top: 1em;
+    margin-bottom: 15px; }
+
+#main-lead-down, #main-guide-down {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  bottom: 15px;
+  color: #f00; }
+  #main-lead-down span, #main-guide-down span {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    height: 35px;
+    text-align: center; }
+  #main-lead-down i, #main-guide-down i {
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px; }
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1, 1); }
+  50% {
+    transform: scale(1.2, 1.2); }
+  100% {
+    transform: scale(1, 1); } }
+#main-guide, #main-resources {
+  /*flex: 1;*/
+  position: relative;
+  padding: 50px 50px;
+  text-align: justify;
+  width: 100%; }
+
+#main-guide {
+  min-height: 100vh; }
+
+#main-resources {
+  min-height: 70vh; }
+
+.main-article {
+  position: relative;
+  min-height: 280px;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+  color: #000;
+  font-size: 1em; }
+  .main-article h1 {
+    font-size: 8em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    margin-bottom: 1em; }
+  .main-article h2 {
+    font-size: 6em;
+    margin-bottom: 1em;
+    text-transform: uppercase; }
+  .main-article h3 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em; }
+  .main-article ul {
+    padding: 0 0 0 0; }
+
+#main-article-list {
+  list-style: none outside; }
+  #main-article-list li {
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; }
+  #main-article-list a {
+    font-size: 1.5em; }
+
+.main-other-link {
+  font-size: 1.5em;
+  color: #000;
+  text-decoration: underline #000 2px; }
+
+.card {
+  min-height: 100px;
+  min-width: 100px;
+  max-width: 300px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em; }
+
+.card-content {
+  position: relative;
+  margin: 20px auto 20px auto;
+  padding: 40px;
+  overflow: hidden;
+  border-radius: 0px;
+  color: #000;
+  background: #fff;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1em; }
+  .card-content text {
+    color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+  .card-content text:hover {
+    text-decoration: none;
+    color: #000; }
+  .card-content:hover {
+    box-shadow: 10px 10px 10px 1px rgba(255, 0, 0, 0.5);
+    text-decoration: none;
+    color: #000; }
+
+.card-title {
+  color: #f00;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-decoration: underline #f00 2px; }
+  .card-title:hover {
+    color: #f00;
+    text-decoration: none; }
+
+#main-resource-list {
+  list-style: none outside; }
+  #main-resource-list li {
+    font-size: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; }
+  #main-resource-list a {
+    font-size: 1.5em; }
+
+/*
+    -------------------------------
+    ----- 8. Content Styles -----
+    -------------------------------
+*/
+.title {
+  position: sticky;
+  height: auto;
+  min-height: 200px;
+  width: 100%;
+  padding: 10px 0px;
+  display: flex;
+  text-align: justify;
+  flex-direction: row; }
+
+.title-content {
+  position: relative;
+  min-height: 150px;
+  height: auto;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  text-align: left;
+  color: #000;
+  font-size: 1em;
+  /*padding: 0 20px;*/ }
+  .title-content h1 {
+    font-size: 8em;
+    text-transform: uppercase; }
+
+.back {
+  position: absolute;
+  width: 200px;
+  overflow: auto; }
+
+.back-link {
+  width: auto;
+  text-decoration: none;
+  text-align: left;
+  bottom: 15px;
+  margin: 0 0 0 10px; }
+  .back-link:hover {
+    color: #f00;
+    text-decoration: none; }
+  .back-link:focus {
+    color: #f00;
+    text-decoration: none; }
+  .back-link:visited {
+    color: #f00;
+    text-decoration: none; }
+  .back-link p {
+    display: inline;
+    font-size: 1.25em;
+    color: #fff;
+    padding: 5px 5px; }
+
+.back-arrow {
+  border: solid #f00;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  margin-bottom: 2px; }
+
+.article {
+  position: relative;
+  min-height: 280px;
+  max-width: 1100px;
+  margin: 0 auto 30px auto;
+  text-align: justify;
+  color: #000;
+  font-size: 1em; }
+  .article h1 {
+    font-size: 8em;
+    text-transform: uppercase;
+    margin-bottom: 1em; }
+  .article h2 {
+    font-size: 6em;
+    margin-bottom: 1em;
+    text-transform: uppercase; }
+  .article h3 {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 0.5em; }
+  .article h4 {
+    margin-bottom: 0px; }
+  .article ul {
+    padding: 0 0 0 0; }
+  .article ol {
+    list-style-type: decimal; }
+    .article ol li {
+      font-size: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em; }
+    .article ol li > ol > li {
+      font-size: 1em; }
+
+.star-list {
+  --icon-size: 1.5em;
+  --gutter: .5em;
+  padding: 0 0 0 0;
+  list-style: inside; }
+  .star-list li {
+    padding-left: var(--gutter); }
+  .star-list li::marker {
+    content: "*";
+    font-size: var(--icon-size);
+    color: #f00; }
+
+.article-link {
+  font-size: 1.25em;
+  color: #f00;
+  text-decoration: underline #f00 2px; }
+  .article-link:focus {
+    color: #aaa;
+    text-decoration: underline #aaa 2px; }
+  .article-link:visited {
+    color: #aaa;
+    text-decoration: underline #aaa 2px; }
+
+.article-list {
+  list-style: none outside; }
+  .article-list li {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em; }
+
+.other-link {
+  font-size: 1.25em;
+  color: #000;
+  text-decoration: underline #000 2px; }
+  .other-link:focus {
+    color: #000;
+    text-decoration: underline #000 2px; }
+  .other-link:visited {
+    color: #000;
+    text-decoration: underline #000 2px; }
+
+.citation {
+  background: linear-gradient(90deg, #f00 0%, #fff 10px, #fff 100%);
+  padding: 10px 20px; }
+
+.grammar-subject {
+  text-decoration: underline #f00 1px; }
+
+.grammar-action {
+  text-decoration: underline #f00 1px;
+  text-decoration-style: double; }
+
+.thumb-up {
+  font-size: 1.25em;
+  color: #000; }
+
+.thumb-down {
+  font-size: 1.25em;
+  color: #f00; }
+
+.crossed-out {
+  text-decoration: overline #f00; }
+
+/*
+    -----------------------------
+    ----- 12. Media Queries -----
+    -----------------------------
+*/
+@media only screen and (max-width: 1400px) {
+  #main-lead-content {
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto; }
+    #main-lead-content h1 {
+      font-size: 8em; }
+    #main-lead-content h2 {
+      font-size: 2.5em; }
+
+  .title {
+    min-height: 150px;
+    text-align: left; }
+
+  .title-content {
+    max-width: 1000px;
+    padding: 0 20px; }
+    .title-content h1 {
+      font-size: 5em; }
+
+  #main-article-list li {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  #main-article-list a {
+    font-size: 1em; }
+
+  .main-article-link, .main-other-link {
+    font-size: 1.25em; }
+
+  .article-link, other-link {
+    font-size: 1em; }
+
+  .article {
+    max-width: 1000px; }
+
+  .back {
+    width: 30px; }
+
+  .back-link p {
+    display: none; } }
+@media only screen and (max-width: 992px) {
+  #main-lead {
+    max-height: auto;
+    padding: 100px 15px; }
+
+  #main-lead-content {
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto; }
+    #main-lead-content h1 {
+      font-size: 4em; }
+    #main-lead-content h2 {
+      font-size: 1.75em; }
+
+  .title {
+    min-height: 120px; }
+
+  .title-content {
+    max-width: 600px;
+    padding: 0 20px; }
+    .title-content h1 {
+      font-size: 3em; }
+
+  .article {
+    max-width: 600px;
+    min-height: 370px; }
+
+  .main-article-link, .main-other-link {
+    font-size: 1em; } }
+@media only screen and (max-width: 768px) {
+  #main-lead-content h1 {
+    font-size: 3em; }
+  #main-lead-content h2 {
+    font-size: 2em; }
+  #main-lead-content a {
+    padding: 10px 20px; }
+
+  .title {
+    min-height: 100px; }
+
+  .title-content h1 {
+    font-size: 3em; }
+
+  #main-lead-down, #main-guide-down {
+    display: none; }
+
+  footer {
+    text-align: center; }
+
+  .social {
+    text-align: center; } }
+@media only screen and (max-width: 480px) {
+  #main-lead-content h1 {
+    font-size: 1.5em; }
+  #main-lead-content h2 {
+    font-size: 1.25em; }
+  #main-lead-content a {
+    font-size: 1em;
+    padding: 5px 10px; }
+
+  .title {
+    min-height: 50px; }
+
+  .title-content h1 {
+    font-size: 2em; }
+
+  .back {
+    width: 15px; } }
+
+/*# sourceMappingURL=styles.css.map */
