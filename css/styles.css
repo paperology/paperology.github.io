@@ -97,14 +97,15 @@ p {
   text-align: justify;
   height: auto;
   min-height: 100%;
-  margin-bottom: -50px; }
+  margin-bottom: -100px; }
 
 .footer {
   background: #000;
-  pagging: 50px 0px;
-  margin-top: auto;
+  pagging: 20px 0px;
+  /*margin-top: auto;*/
   margin-bottom: 0;
-  height: 60px; }
+  height: 110px;
+  width: 100%; }
 
 .copyright {
   position: relative;
@@ -126,6 +127,25 @@ p {
     text-align: center; }
   .top i {
     color: #fff; }
+
+.social {
+  text-align: right;
+  padding-top: 20px;
+  color: #fff; }
+  .social ul {
+    margin: 5px 0 0 0;
+    padding: 0px; }
+  .social li {
+    font-size: 1em;
+    list-style: none; }
+  .social a {
+    color: #fff;
+    padding: 10px; }
+    .social a:hover {
+      color: #f00; }
+  .social img {
+    max-height: 20px;
+    width: auto; }
 
 .download {
   position: relative;
@@ -169,26 +189,6 @@ p {
   font-size: 10em;
   font-weight: 100;
   margin: 0 0 30px 0; }
-
-.social {
-  text-align: right;
-  color: #fff; }
-  .social ul {
-    margin: 5px 0 0 0;
-    padding: 0; }
-  .social li {
-    display: inline-block;
-    font-size: 1em;
-    list-style: none; }
-  .social a {
-    display: block;
-    color: #fff;
-    padding: 10px; }
-    .social a:hover {
-      color: #f00; }
-  .social img {
-    max-height: 20px;
-    width: auto; }
 
 .accent {
   color: #f00; }
@@ -432,14 +432,16 @@ p {
 .back {
   position: absolute;
   width: 200px;
-  overflow: auto; }
+  overflow: auto;
+  z-index: 10; }
 
 .back-link {
   width: auto;
   text-decoration: none;
   text-align: left;
   bottom: 15px;
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px;
+  z-index: 10; }
   .back-link:hover {
     color: #f00;
     text-decoration: none; }
@@ -469,7 +471,8 @@ p {
   margin: 0 auto 30px auto;
   text-align: justify;
   color: #000;
-  font-size: 1em; }
+  font-size: 1em;
+  padding: 0 0 30px 0; }
   .article h1 {
     font-size: 8em;
     text-transform: uppercase;
@@ -538,7 +541,8 @@ p {
 
 .citation {
   background: linear-gradient(90deg, #f00 0%, #fff 10px, #fff 100%);
-  padding: 10px 20px; }
+  padding: 10px 20px;
+  margin-bottom: 10px; }
 
 .grammar-subject {
   text-decoration: underline #f00 1px; }
@@ -556,7 +560,7 @@ p {
   color: #f00; }
 
 .crossed-out {
-  text-decoration: overline #f00; }
+  text-decoration: line-through #f00; }
 
 /*
     -----------------------------
@@ -580,21 +584,20 @@ p {
 
   .title-content {
     max-width: 1000px;
-    padding: 0 20px; }
+    padding: 30px 30px; }
     .title-content h1 {
       font-size: 5em; }
 
-  #main-article-list li {
+  #main-article-list li, #main-resource-list li {
     margin-top: 1em;
-    margin-bottom: 1em; }
-  #main-article-list a {
+    margin-bottom: 1em;
     font-size: 1em; }
 
   .main-article-link, .main-other-link {
     font-size: 1.25em; }
 
   .article-link, other-link {
-    font-size: 1em; }
+    font-size: 1.25em; }
 
   .article {
     max-width: 1000px; }
@@ -615,9 +618,9 @@ p {
     left: auto;
     top: auto; }
     #main-lead-content h1 {
-      font-size: 4em; }
+      font-size: 5em; }
     #main-lead-content h2 {
-      font-size: 1.75em; }
+      font-size: 1.5em; }
 
   .title {
     min-height: 120px; }
@@ -628,42 +631,34 @@ p {
     .title-content h1 {
       font-size: 3em; }
 
-  .article {
+  .article, .main-article {
     max-width: 600px;
     min-height: 370px; }
+    .article h2, .main-article h2 {
+      font-size: 3em; }
 
   .main-article-link, .main-other-link {
     font-size: 1em; } }
 @media only screen and (max-width: 768px) {
-  #main-lead-content h1 {
-    font-size: 3em; }
-  #main-lead-content h2 {
-    font-size: 2em; }
-  #main-lead-content a {
-    padding: 10px 20px; }
-
   .title {
     min-height: 100px; }
 
   .title-content h1 {
     font-size: 3em; }
 
-  #main-lead-down, #main-guide-down {
+  #main-lead-down, #main-guide-down, #to-top {
     display: none; }
 
-  footer {
+  .social {
     text-align: center; }
 
-  .social {
+  .copyright {
     text-align: center; } }
 @media only screen and (max-width: 480px) {
-  #main-lead-content h1 {
+  .main-article h1 {
     font-size: 1.5em; }
-  #main-lead-content h2 {
+  .main-article h2 {
     font-size: 1.25em; }
-  #main-lead-content a {
-    font-size: 1em;
-    padding: 5px 10px; }
 
   .title {
     min-height: 50px; }
