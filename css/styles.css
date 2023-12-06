@@ -500,15 +500,16 @@ p {
 
 .star-list {
   --icon-size: 1.5em;
-  --gutter: .5em;
+  --gutter: 0em;
   padding: 0 0 0 0;
   list-style: inside; }
   .star-list li {
     padding-left: var(--gutter); }
   .star-list li::marker {
-    content: "*";
+    content: "* ";
     font-size: var(--icon-size);
-    color: #f00; }
+    color: #f00;
+    display: none; }
 
 .article-link {
   font-size: 1.25em;
@@ -588,17 +589,6 @@ p {
     .title-content h1 {
       font-size: 5em; }
 
-  #main-article-list li, #main-resource-list li {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 1em; }
-
-  .main-article-link, .main-other-link {
-    font-size: 1.25em; }
-
-  .article-link, other-link {
-    font-size: 1.25em; }
-
   .article {
     max-width: 1000px; }
 
@@ -635,10 +625,7 @@ p {
     max-width: 600px;
     min-height: 370px; }
     .article h2, .main-article h2 {
-      font-size: 3em; }
-
-  .main-article-link, .main-other-link {
-    font-size: 1em; } }
+      font-size: 3em; } }
 @media only screen and (max-width: 768px) {
   .title {
     min-height: 100px; }
