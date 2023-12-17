@@ -33,6 +33,7 @@ $base-color: #000;
 $accent-color: #f00;
 $light-accent-color: rgba(255, 0, 0, 0.5);
 $complementary-color: #aaa;
+$visited-color: #999;
 $highlight-color: #ccc;
 $background-color: #fff;
 $text-color: #000;
@@ -88,7 +89,8 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-family: sans-serif;
+    font-size: 18px;
     background: linear-gradient(180deg, $complementary-color 0%, $background-color 60%, $background-color 100%);
     background-repeat: no-repeat;
     height: 100%;
@@ -108,12 +110,12 @@ body {
 h1, h2, h3, p, a, text {
     color: $text-color;
     font-weight: 50;
-    margin: 0;
     text-align: justify;
 }
 
 h1, h2, h3 {
     font-family: Courier New, monospace;
+    letter-spacing: 0.05em;
 }
 
 h1 {
@@ -138,15 +140,6 @@ p {
 
 // No JS styles
 .no-js {
-}
-
-@keyframes dropHeader {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 .content {
@@ -210,6 +203,7 @@ p {
     color: $text-color;
     background: $light-accent-color;
     padding: 15px 25px;
+    margin-bottom: 50px;
     text-align: center;
     width: 150px;
     max-width: 150px;
@@ -224,27 +218,12 @@ p {
         text-decoration: none;
     }
 
-    &:focus {
+    &:focus, &:visited {
         box-shadow: 5px 5px 10px 1px $light-accent-color;
         color: $text-color;
         background: $background-color;
         text-decoration: none;
     }
-
-    &:visited {
-        box-shadow: 5px 5px 10px 1px $light-accent-color;
-        color: $text-color;
-        background: $background-color;
-        text-decoration: none;
-    }
-}
-
-.heading {
-    position: relative;
-    display: inline-block;
-    font-size: 10em;
-    font-weight: 100;
-    margin: 0 0 30px 0;
 }
 
 .social {
@@ -310,12 +289,8 @@ p {
         text-decoration: none;
     }
 
-    &:focus {
-        color: $complementary-color;
-    }
-
-    &:visited {
-        color: $complementary-color;
+    &:focus, &:visited  {
+        color: $visited-color;
     }
 }
 
@@ -333,12 +308,7 @@ p {
     padding: 50px 50px;
     background-size: cover;
     overflow: hidden;
-    text-align: center;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    -ms-transition: padding 0.3s;
-    -o-transition: padding 0.3s;
-    transition: padding 0.3s;
+    text-align: justify;
 }
 
 #main-lead-content {
@@ -347,70 +317,18 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    -webkit-transition: padding 0.3s;
-    -moz-transition: padding 0.3s;
-    -ms-transition: padding 0.3s;
-    -o-transition: padding 0.3s;
-    transition: padding 0.3s;
-
-    h1, h2 {
-        margin: 0;
-    }
+    text-align: justify;
 
     h1 {
-        color: #fff;
-        font-size: 12em;
+        font-size: 10em;
         text-transform: lowercase;
         letter-spacing: 0.05em;
-        line-height: 0.9em;
     }
 
     h2 {
-        color: #fff;
-        font-size: 2.25em;
-        margin-top: 1em;
+        font-size: 2em;
+        text-transform: lowercase;
         margin-bottom: 15px;
-    }
-}
-
-#main-lead-down, #main-guide-down {
-    position: absolute;
-    left: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 10;
-    bottom: 15px;
-    color: $accent-color;
-
-    span {
-        cursor: pointer;
-        display: block;
-        margin: 0 auto;
-        width: 35px;
-        height: 35px;
-        text-align:center;
-    }
-
-    i {
-        animation: pulsate 1.5s ease;
-        animation-iteration-count: infinite;
-        padding-top: 5px;
-    }
-}
-
-@keyframes pulsate {
-    0% {
-        transform: scale(1, 1);
-    }
-
-    50% {
-        transform: scale(1.2, 1.2);
-    }
-
-    100% {
-        transform: scale(1, 1);
     }
 }
 
@@ -423,70 +341,47 @@ p {
 }
 
 #main-guide {
+    background: $base-color;
+    color: $background-color;
     min-height: 100vh;
-}
+    color: #fff;
 
-#main-resources {
-    min-height: 70vh;
-}
-
-.main-article {
-    position: relative;
-    min-height: 280px;
-    max-width: 1100px;
-    margin: 0 auto 30px auto;
-    text-align: justify;
-    color: $text-color;
-    font-size: 1em;
-
-    h1 {
-        font-size: 8em;
-        text-transform: uppercase;
-        margin-bottom: 1em;
-        margin-bottom: 1em;
-    }
-
-    h2 {
-        font-size: 6em;
-        margin-bottom: 1em;
-        text-transform: uppercase;
-    }
-
-    h3 {
-        font-size: 2em;
-        margin-top: 1em;
-        margin-bottom: 0.5em;
-    }
-
-    ul {
-        padding: 0 0 0 0;
-    }
-}
-
-#main-article-list {
-    list-style: none outside;
-
-    li {
-        font-size: 1em;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em; 
+    h1, h2, p, text {
+        color: #fff;
     }
 
     a {
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 
-.main-other-link {
-    font-size: 1.5em;
-    color: $text-color;
-    text-decoration: underline $text-color 2px;
+#main-resources {
+    min-height: 100vh;
+    font-size: 1em;
+
+    a {
+        font-size: 1.25em;
+        color: $text-color;
+        text-decoration: underline $text-color 2px;
+
+        &:focus, &:visited {
+            color: $text-color;
+            text-decoration: underline $text-color 2px;
+        }
+    }
+}
+
+.image {
+    min-height: 100px;
+    max-width: 1000px;
+    padding-top: 100px;
+    margin: auto 20px auto 20px;
+    display: flex;
 }
 
 .card {
     min-height: 100px;
-    min-width: 100px;
-    max-width: 300px;
+    padding-top: 100px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -496,13 +391,13 @@ p {
 
 .card-content {
     position: relative;
+    max-width: 500px;
     margin: 20px auto 20px auto;
-    padding: 40px;
+    padding: 60px 80px;
     overflow: hidden;
     border-radius: 0px;
     color: $text-color;
     background: $background-color;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
     text-align: center;
     display: flex;
     justify-content: center;
@@ -517,15 +412,29 @@ p {
         left: 50%;
     }
 
-    text:hover {
+    text:hover, text:focus, text:visited {
         text-decoration: none;
         color: $base-color;
     }
 
+    &:hover, &:focus, &:visited {
+        text-decoration: none;
+        color: $text-color;
+    }
+}
+
+#card-content-checklist {
+    box-shadow: 5px 5px 10px 1px rgba(255, 255, 255, 0.5);
     &:hover {
         box-shadow: 10px 10px 10px 1px rgba(255, 0, 0, 0.5);
-        text-decoration: none;
-        color: $base-color;
+    }   
+}
+
+
+#card-content-card {
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    &:hover {
+        box-shadow: 10px 10px 10px 1px rgba(255, 0, 0, 0.5);
     }
 }
 
@@ -538,20 +447,6 @@ p {
     &:hover {
         color: $accent-color;
         text-decoration: none;
-    }
-}
-
-#main-resource-list {
-    list-style: none outside;
-
-    li {
-        font-size: 1em;
-        margin-top: 1.5em;
-        margin-bottom: 1.5em; 
-    }
-
-    a {
-        font-size: 1.5em;
     }
 }
 
@@ -570,7 +465,7 @@ p {
     width: 100%;
     padding: 10px 0px;
     display: flex;
-    text-align: justify;
+    text-align: left;
     flex-direction: row;
 }
 
@@ -609,12 +504,7 @@ p {
         text-decoration: none;
     }
 
-    &:focus {
-        color: $accent-color;
-        text-decoration: none;
-    }
-
-    &:visited {
+    &:focus, &:visited {
         color: $accent-color;
         text-decoration: none;
     }
@@ -639,7 +529,8 @@ p {
     position: relative;
     min-height: 280px;
     max-width: 1100px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 30px 0;
+    padding-bottom: 50px;
     text-align: justify;
     color: $text-color;
     font-size: 1em;
@@ -668,6 +559,14 @@ p {
 
     ul {
         padding: 0 0 0 0;
+        list-style: none outside;
+
+        li {
+            padding-left: 0;
+            font-size: 1em;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em; 
+        }
     }
 
     ol {
@@ -687,7 +586,7 @@ p {
 
 .star-list {
     --icon-size: 1.5em;
-    --gutter: .5em;
+    --gutter: 0em;
     padding: 0 0 0 0;
     list-style: inside;
 
@@ -696,7 +595,7 @@ p {
     }
 
     li::marker {
-        content: "*";
+        content: "* ";
         font-size: var(--icon-size);
         color: $accent-color;
     }
@@ -707,14 +606,9 @@ p {
     color: $accent-color;
     text-decoration: underline $accent-color 2px;
 
-    &:focus {
-        color: $complementary-color;
-        text-decoration: underline $complementary-color 2px;
-    }
-
-    &:visited {
-        color: $complementary-color;
-        text-decoration: underline $complementary-color 2px;
+    &:focus, &:visited {
+        color: $visited-color;
+        text-decoration: underline $visited-color 2px;
     }
 }
 
@@ -727,23 +621,6 @@ p {
         margin-bottom: 1em; 
     }
 }
-
-.other-link {
-    font-size: 1.25em;
-    color: $text-color;
-    text-decoration: underline $text-color 2px;
-
-    &:focus {
-        color: $text-color;
-        text-decoration: underline $text-color 2px;
-    }
-
-    &:visited {
-        color: $text-color;
-        text-decoration: underline $text-color 2px;
-    }
-}
-
 
 .citation {
     background: linear-gradient(90deg, $accent-color 0%, $background-color 10px, $background-color 100%);
@@ -770,7 +647,7 @@ p {
 }
 
 .crossed-out {
-    text-decoration: overline $accent-color;
+    text-decoration: line-through $accent-color;
 }
 
 /*
@@ -795,7 +672,7 @@ p {
         }
 
         h2 {
-            font-size: 2.5em;
+            font-size: 2em;
         }
     }
 
@@ -812,27 +689,12 @@ p {
         }
     }
 
-    #main-article-list {
-        li {
-            margin-top: 1em;
-            margin-bottom: 1em; 
-        }
-
-        a {
-            font-size: 1em;
-        }
-    }
-
-    .main-article-link, .main-other-link {
-        font-size: 1.25em;
-    }
-
-    .article-link, other-link {
+    .article-link {
         font-size: 1em;
     }
 
     .article {
-        max-width: 1000px;
+        max-width: 900px;
     }
 
     .back {
@@ -886,8 +748,8 @@ p {
         min-height: 370px;
     }
 
-    .main-article-link, .main-other-link {
-        font-size: 1em;
+    .image {
+        max-width: 600px;
     }
 }
 
@@ -896,11 +758,11 @@ p {
 
     #main-lead-content {
         h1 {
-            font-size: 3em;
+            font-size: 2em;
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 1.5em;
         }
 
         a {
@@ -918,8 +780,16 @@ p {
         }
     }
 
-    #main-lead-down, #main-guide-down {
-        display: none;
+    .article {
+        max-width: 600px;
+    }
+
+    .image {
+        max-width: 600px;
+    }
+
+    #card-content-card {
+        margin: 20px 20px;
     }
 
     footer {
@@ -959,8 +829,15 @@ p {
         }
     }
 
+    .article {
+        max-width: 400px;
+    }
+
+    .image {
+        max-width: 400px;
+    }
+
     .back {
         width: 20px;
     }
-
 }
