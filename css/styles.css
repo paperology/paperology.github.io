@@ -109,20 +109,6 @@ p {
     margin: 0;
     color: #fff; }
 
-.top {
-  text-align: center;
-  color: #f00; }
-  .top span {
-    cursor: pointer;
-    display: block;
-    margin: 15px auto 0 auto;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    text-align: center; }
-  .top i {
-    color: #fff; }
-
 .download {
   position: relative;
   padding: 0px 0px;
@@ -134,30 +120,29 @@ p {
 
 .download-btn {
   display: inline-block;
-  color: #000;
-  background: rgba(255, 0, 0, 0.5);
+  color: #f00;
+  background: #fff;
   padding: 15px 25px;
   margin-bottom: 50px;
   text-align: center;
   width: 150px;
   max-width: 150px;
   border-radius: 0px;
-  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
-  transition: 0.5s ease all; }
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5); }
   .download-btn:hover {
     box-shadow: 5px 5px 10px 1px rgba(255, 0, 0, 0.5);
-    color: #000;
+    color: #f00;
     background: #fff;
     text-decoration: none; }
   .download-btn:focus, .download-btn:visited {
-    box-shadow: 5px 5px 10px 1px rgba(255, 0, 0, 0.5);
-    color: #000;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    color: #aaa;
     background: #fff;
     text-decoration: none; }
 
 .social {
   text-align: right;
-  color: #fff; }
+  color: #000; }
   .social ul {
     margin: 5px 0 0 0;
     padding: 0; }
@@ -179,7 +164,7 @@ p {
   color: #f00; }
 
 .highlight {
-  background-color: rgba(255, 0, 0, 0.5); }
+  background-color: rgba(255, 0, 0, 0.4); }
 
 .arrow {
   border: solid #000;
@@ -200,6 +185,12 @@ p {
   color: #000;
   text-decoration: none; }
 .link:focus, .link:visited {
+  color: #999; }
+
+.inverse-link:hover {
+  color: #fff;
+  text-decoration: none; }
+.inverse-link:focus, .inverse-link:visited {
   color: #999; }
 
 /*
@@ -243,8 +234,7 @@ p {
 #main-guide {
   background: #000;
   color: #fff;
-  min-height: 100vh;
-  color: #fff; }
+  min-height: 100vh; }
   #main-guide h1, #main-guide h2, #main-guide p, #main-guide text {
     color: #fff; }
   #main-guide a {
@@ -317,7 +307,7 @@ p {
   color: #f00;
   font-size: 1.5em;
   text-transform: uppercase;
-  text-decoration: underline #f00 2px; }
+  text-decoration: none; }
   .card-title:hover {
     color: #f00;
     text-decoration: none; }
@@ -362,10 +352,7 @@ p {
   text-align: left;
   bottom: 15px;
   margin: 0 0 0 10px; }
-  .back-link:hover {
-    color: #f00;
-    text-decoration: none; }
-  .back-link:focus, .back-link:visited {
+  .back-link:hover, .back-link:focus, .back-link:visited {
     color: #f00;
     text-decoration: none; }
   .back-link p {

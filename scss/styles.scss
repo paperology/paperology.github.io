@@ -29,14 +29,23 @@
 */
 
 // Define base and accent colors
-$base-color: #000;
-$accent-color: #f00;
-$light-accent-color: rgba(255, 0, 0, 0.5);
-$complementary-color: #aaa;
-$visited-color: #999;
-$highlight-color: #ccc;
 $background-color: #fff;
+$complementary-color: #aaa;
 $text-color: #000;
+$visited-color: #999;
+
+$inverse-background-color: #000;
+$inverse-complementary-color: #aaa;
+$inverse-text-color: #fff;
+$inverse-visited-color: #999;
+
+$accent-color: #f00;
+$light-accent-color: rgba(255, 0, 0, 0.4);
+
+$shadow-color: rgba(0, 0, 0, 0.5);
+$accent-shadow-color: rgba(255, 0, 0, 0.5);
+$inverse-shadow-color: rgba(255, 255, 255, 0.5);
+
 
 /*
     ---------------------
@@ -152,7 +161,7 @@ p {
 }
 
 .footer {
-    background: $base-color;
+    background: $inverse-background-color;
     pagging: 50px 0px;
     margin-top: auto;
     margin-bottom: 0;
@@ -165,26 +174,7 @@ p {
 
     p {
         margin: 0;
-        color: $background-color;
-    }
-}
-
-.top {
-    text-align: center;
-    color: $accent-color;
-
-    span {
-        cursor: pointer;
-        display: block;
-        margin: 15px auto 0 auto;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        text-align: center;
-    }
-
-    i {
-        color: $background-color;
+        color: $inverse-text-color;
     }
 }
 
@@ -200,27 +190,26 @@ p {
 
 .download-btn {
     display: inline-block;
-    color: $text-color;
-    background: $light-accent-color;
+    color: $accent-color;
+    background: $background-color;
     padding: 15px 25px;
     margin-bottom: 50px;
     text-align: center;
     width: 150px;
     max-width: 150px;
     border-radius: 0px;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
-    @include transition();
+    box-shadow: 5px 5px 10px 1px $shadow-color;
 
     &:hover {
-        box-shadow: 5px 5px 10px 1px $light-accent-color;
-        color: $text-color;
+        box-shadow: 5px 5px 10px 1px $accent-shadow-color;
+        color: $accent-color;
         background: $background-color;
         text-decoration: none;
     }
 
     &:focus, &:visited {
-        box-shadow: 5px 5px 10px 1px $light-accent-color;
-        color: $text-color;
+        box-shadow: 5px 5px 10px 1px $shadow-color;
+        color: $complementary-color;
         background: $background-color;
         text-decoration: none;
     }
@@ -228,7 +217,7 @@ p {
 
 .social {
     text-align: right;
-    color: $background-color;
+    color: $inverse-background-color;
 
     ul {
         margin: 5px 0 0 0;
@@ -243,7 +232,7 @@ p {
 
     a {
         display: block;
-        color: $background-color;
+        color: $inverse-text-color;
         padding: 10px;
 
         &:hover {
@@ -262,7 +251,7 @@ p {
 }
 
 .highlight {
-    background-color: rgba(255, 0, 0, 0.5);
+    background-color: $light-accent-color;
 }
 
 .arrow {
@@ -291,6 +280,17 @@ p {
 
     &:focus, &:visited  {
         color: $visited-color;
+    }
+}
+
+.inverse-link {
+    &:hover {
+        color: $inverse-text-color;
+        text-decoration: none;
+    }
+
+    &:focus, &:visited  {
+        color: $inverse-visited-color;
     }
 }
 
@@ -341,13 +341,12 @@ p {
 }
 
 #main-guide {
-    background: $base-color;
-    color: $background-color;
+    background: $inverse-background-color;
+    color: $inverse-text-color;
     min-height: 100vh;
-    color: #fff;
 
     h1, h2, p, text {
-        color: #fff;
+        color: $inverse-text-color;
     }
 
     a {
@@ -374,8 +373,7 @@ p {
 .image {
     min-height: 100px;
     max-width: 1000px;
-    padding-top: 100px;
-    margin: auto 20px auto 20px;
+    margin: 20px;
     display: flex;
 }
 
@@ -414,7 +412,7 @@ p {
 
     text:hover, text:focus, text:visited {
         text-decoration: none;
-        color: $base-color;
+        color: $text-color;
     }
 
     &:hover, &:focus, &:visited {
@@ -424,17 +422,17 @@ p {
 }
 
 #card-content-checklist {
-    box-shadow: 5px 5px 10px 1px rgba(255, 255, 255, 0.5);
+    box-shadow: 5px 5px 10px 1px $inverse-shadow-color;
     &:hover {
-        box-shadow: 10px 10px 10px 1px rgba(255, 0, 0, 0.5);
+        box-shadow: 10px 10px 10px 1px $accent-shadow-color;
     }   
 }
 
 
 #card-content-card {
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 10px 1px $shadow-color;
     &:hover {
-        box-shadow: 10px 10px 10px 1px rgba(255, 0, 0, 0.5);
+        box-shadow: 10px 10px 10px 1px $accent-shadow-color;
     }
 }
 
@@ -442,7 +440,7 @@ p {
     color: $accent-color;
     font-size: 1.5em;
     text-transform: uppercase;
-    text-decoration: underline $accent-color 2px;
+    text-decoration: none;
 
     &:hover {
         color: $accent-color;
@@ -499,12 +497,7 @@ p {
     bottom: 15px;
     margin: 0 0 0 10px;
 
-    &:hover {
-        color: $accent-color;
-        text-decoration: none;
-    }
-
-    &:focus, &:visited {
+    &:hover, &:focus, &:visited {
         color: $accent-color;
         text-decoration: none;
     }
@@ -512,7 +505,7 @@ p {
     p {
         display: inline;
         font-size: 1.25em;
-        color: $background-color;
+        color: $inverse-text-color;
         padding: 5px 5px;
     }
 }
@@ -638,7 +631,7 @@ p {
 
 .thumb-up {
     font-size: 1.25em;
-    color: $base-color;
+    color: $text-color;
 }
 
 .thumb-down {
