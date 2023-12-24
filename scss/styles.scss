@@ -32,7 +32,7 @@
 $background-color: #fff;
 $complementary-color: #aaa;
 $text-color: #000;
-$visited-color: #999;
+$visited-color: #8A1800;
 
 $inverse-background-color: #000;
 $inverse-complementary-color: #aaa;
@@ -99,7 +99,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     background: linear-gradient(180deg, $complementary-color 0%, $background-color 60%, $background-color 100%);
     background-repeat: no-repeat;
     height: 100%;
@@ -170,11 +170,11 @@ p {
 
 .copyright {
     position: relative;
-    padding-top: 20px;
-
+    padding-top: 5px;
+    font-size: 1em;
     p {
-        margin: 0;
         color: $inverse-text-color;
+        display: inline-block;
     }
 }
 
@@ -198,10 +198,10 @@ p {
     width: 150px;
     max-width: 150px;
     border-radius: 0px;
-    box-shadow: 5px 5px 10px 1px $shadow-color;
+    box-shadow: 5px 5px 10px 1px $accent-shadow-color;
 
     &:hover {
-        box-shadow: 5px 5px 10px 1px $accent-shadow-color;
+        box-shadow: 5px 5px 10px 1px $shadow-color;
         color: $accent-color;
         background: $background-color;
         text-decoration: none;
@@ -270,28 +270,6 @@ p {
 .left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
-}
-
-.link {
-    &:hover {
-        color: $text-color;
-        text-decoration: none;
-    }
-
-    &:focus, &:visited  {
-        color: $visited-color;
-    }
-}
-
-.inverse-link {
-    &:hover {
-        color: $inverse-text-color;
-        text-decoration: none;
-    }
-
-    &:focus, &:visited  {
-        color: $inverse-visited-color;
-    }
 }
 
 /*
@@ -422,17 +400,17 @@ p {
 }
 
 #card-content-checklist {
-    box-shadow: 5px 5px 10px 1px $inverse-shadow-color;
+    box-shadow: 5px 5px 10px 1px $accent-shadow-color;
     &:hover {
-        box-shadow: 10px 10px 10px 1px $accent-shadow-color;
+        box-shadow: 10px 10px 10px 1px $inverse-shadow-color;
     }   
 }
 
 
 #card-content-card {
-    box-shadow: 5px 5px 10px 1px $shadow-color;
+    box-shadow: 5px 5px 10px 1px $accent-shadow-color;
     &:hover {
-        box-shadow: 10px 10px 10px 1px $accent-shadow-color;
+        box-shadow: 10px 10px 10px 1px $shadow-color;
     }
 }
 
@@ -461,10 +439,11 @@ p {
     height: auto;
     min-height: 200px;
     width: 100%;
-    padding: 10px 0px;
+    padding: 0 20px;
     display: flex;
     text-align: left;
     flex-direction: row;
+    margin: 0 auto 30px 0;
 }
 
 .title-content {
@@ -479,15 +458,17 @@ p {
     /*padding: 0 20px;*/
 
     h1 {
-        font-size: 8em;
+        font-size: 7.5em;
         text-transform: uppercase;
     }
 }
 
 .back {
     position: absolute;
-    width: 200px;
+    width: 210px;
     overflow: auto;
+    z-index: 100;
+    margin-top: 10px;
 }
 
 .back-link {
@@ -495,7 +476,7 @@ p {
     text-decoration: none;
     text-align: left;
     bottom: 15px;
-    margin: 0 0 0 10px;
+    margin: 10px 10px 0 10px;
 
     &:hover, &:focus, &:visited {
         color: $accent-color;
@@ -514,7 +495,7 @@ p {
     border: solid $accent-color;
     border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 5px;
     margin-bottom: 2px;
 }
 
@@ -551,8 +532,9 @@ p {
     }
 
     ul {
-        padding: 0 0 0 0;
-        list-style: none outside;
+        list-style: none inside;
+        padding-left: 0em;
+        text-align: left;
 
         li {
             padding-left: 0;
@@ -563,12 +545,17 @@ p {
     }
 
     ol {
-        list-style-type: decimal;
+        list-style: decimal inside;
+        padding-left: 0em;
 
         li {
             font-size: 1em;
             margin-top: 1em;
             margin-bottom: 1em; 
+        }
+
+        li::marker {
+            font-size: 1.25em;
         }
 
         li > ol > li {
@@ -579,7 +566,7 @@ p {
 
 .star-list {
     --icon-size: 1.5em;
-    --gutter: 0em;
+    --gutter: 2em;
     padding: 0 0 0 0;
     list-style: inside;
 
@@ -598,6 +585,12 @@ p {
     font-size: 1.25em;
     color: $accent-color;
     text-decoration: underline $accent-color 2px;
+
+    &:hover{
+        color: $accent-color;
+        text-decoration: none;
+    }
+
 
     &:focus, &:visited {
         color: $visited-color;
@@ -661,7 +654,7 @@ p {
         top: auto;
 
         h1 {
-            font-size: 8em;
+            font-size: 7.5em;
         }
 
         h2 {
@@ -691,7 +684,7 @@ p {
     }
 
     .back {
-        width: 30px;
+        width: 40px;
     }
     
     .back-link {
@@ -739,6 +732,14 @@ p {
     .article {
         max-width: 600px;
         min-height: 370px;
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
     }
 
     .image {
@@ -751,7 +752,7 @@ p {
 
     #main-lead-content {
         h1 {
-            font-size: 2em;
+            font-size: 3em;
         }
 
         h2 {
@@ -775,18 +776,32 @@ p {
 
     .article {
         max-width: 600px;
+        padding-bottom: 100px;
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
     }
 
     .image {
-        max-width: 600px;
+        max-width: 400px;
     }
 
     #card-content-card {
         margin: 20px 20px;
     }
 
-    footer {
+    .copyright {
         text-align: center;
+    }
+
+    .footer {
+        text-align: center;
+        height: 110px;
     }
 
     .social {
@@ -799,7 +814,7 @@ p {
 
     #main-lead-content {
         h1 {
-            font-size: 1.5em;
+            font-size: 2em;
         }
 
         h2 {
@@ -824,13 +839,20 @@ p {
 
     .article {
         max-width: 400px;
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
     }
 
     .image {
-        max-width: 400px;
+        max-width: 100%;
     }
 
     .back {
-        width: 20px;
+        width: 30px;
     }
 }
