@@ -390,16 +390,17 @@ p {
       margin-top: 1.5em;
       margin-bottom: 1.5em; }
   .article ol {
-    list-style: decimal inside;
-    padding-left: 0em; }
+    list-style: decimal inside; }
     .article ol li {
       font-size: 1em;
       margin-top: 1em;
-      margin-bottom: 1em; }
+      margin-bottom: 1em;
+      padding-left: 0em; }
     .article ol li::marker {
       font-size: 1.25em; }
     .article ol li > ol > li {
-      font-size: 1em; }
+      font-size: 1em;
+      padding-left: 2em; }
 
 .star-list {
   --icon-size: 1.5em;
@@ -409,7 +410,7 @@ p {
   .star-list li {
     padding-left: var(--gutter); }
   .star-list li::marker {
-    content: "* ";
+    content: " ";
     font-size: var(--icon-size);
     color: #f00;
     display: none; }

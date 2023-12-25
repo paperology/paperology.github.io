@@ -543,12 +543,11 @@ p {
 
     ol {
         list-style: decimal inside;
-        padding-left: 0em;
-
         li {
             font-size: 1em;
             margin-top: 1em;
-            margin-bottom: 1em; 
+            margin-bottom: 1em;
+            padding-left: 0em; 
         }
 
         li::marker {
@@ -557,6 +556,7 @@ p {
 
         li > ol > li {
             font-size: 1em;
+            padding-left: 2em;
         }
     }
 }
@@ -572,7 +572,7 @@ p {
     }
 
     li::marker {
-        content: "* ";
+        content: " ";
         font-size: var(--icon-size);
         color: $accent-color;
         display: none;
