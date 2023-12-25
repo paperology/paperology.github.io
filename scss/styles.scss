@@ -439,11 +439,10 @@ p {
     height: auto;
     min-height: 200px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0;
     display: flex;
     text-align: left;
     flex-direction: row;
-    margin: 0 auto 30px 0;
 }
 
 .title-content {
@@ -452,10 +451,8 @@ p {
     height: auto;
     max-width: 1100px;
     margin: 0 auto 30px auto;
-    text-align: left;
     color: $text-color;
     font-size: 1em;
-    /*padding: 0 20px;*/
 
     h1 {
         font-size: 7.5em;
@@ -465,7 +462,7 @@ p {
 
 .back {
     position: absolute;
-    width: 210px;
+    width: 220px;
     overflow: auto;
     z-index: 100;
     margin-top: 10px;
@@ -475,8 +472,8 @@ p {
     width: auto;
     text-decoration: none;
     text-align: left;
-    bottom: 15px;
-    margin: 10px 10px 0 10px;
+    margin: 3px;
+    padding: 5px;
 
     &:hover, &:focus, &:visited {
         color: $accent-color;
@@ -578,6 +575,7 @@ p {
         content: "* ";
         font-size: var(--icon-size);
         color: $accent-color;
+        display: none;
     }
 }
 
@@ -609,8 +607,9 @@ p {
 }
 
 .citation {
-    background: linear-gradient(90deg, $accent-color 0%, $background-color 10px, $background-color 100%);
+    background: linear-gradient(90deg, $accent-color 5px, $background-color 6px, $background-color 100%);
     padding: 10px 20px;
+    margin: 10px 0px;
 }
 
 .grammar-subject {
